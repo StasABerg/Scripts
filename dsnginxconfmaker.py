@@ -4,7 +4,6 @@ with open('list.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     sites = list(reader)
 
-# Generate a configuration file for each site
 for site in sites:
     sitename = site['sitename']
     www_option = site['www_option']
