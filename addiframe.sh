@@ -45,6 +45,7 @@ document.write(' top:0px;');
 document.write('}');
 document.write(' html, div, body, iframe {');
 document.write(' width: 100% !important;');
+document.write(' margin: 0 !important;');
 document.write(' min-width: 100% !important;');
 document.write('}');
 document.write('</style>');
