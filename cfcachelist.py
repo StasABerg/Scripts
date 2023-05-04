@@ -20,7 +20,6 @@ with open("domains.txt", "r") as f:
         domains.append(domain)
 
 for domain in domains:
-    # Make a request to the Cloudflare API to get the zone for the domain
     response = requests.get(
         "https://api.cloudflare.com/client/v4/zones",
         headers=headers,
