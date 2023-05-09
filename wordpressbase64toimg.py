@@ -44,7 +44,7 @@ post_data = get_all_posts()
 #loop through posts and find base64
 for post in post_data:
     post_id = post['id']
-    print(f'Start processing post ID: {post_id}')  # Add this line
+    print(f'Start processing post ID: {post_id}') 
     response = requests.get(f'{site_url}/wp-json/wp/v2/posts/{post_id}', auth=auth)
     if response.status_code != 200:
         print('Error retrieving post:', response.text)
@@ -66,7 +66,7 @@ for post in post_data:
         if len(image_data) < 10 or image_data[:2] not in (b'\xff\xd8', b'\x89P', b'BM', b'GIF'):
             print(f'Invalid image data for post ID: {post_id}. Image data: {image_data[:10]}...')
             continue
-
+       #turn patterned and rgba to img
         try:
             image = Image.open(BytesIO(image_data))
             if image.mode == 'P':
